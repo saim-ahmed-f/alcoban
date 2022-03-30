@@ -52,12 +52,12 @@ INSTALLED_APPS = [
 
     # api App
 
-    'product_api.apps.ProductApiConfig',
-    'review.apps.ReviewConfig',
-    'shipping_detail.apps.ShippingDetailConfig',
-    'orders.apps.OrdersConfig',
+    'product_api',
+    'review',
+    'shipping_detail',
+    'orders',
 
-    'accounts.apps.AccountsConfig',
+    'accounts',
 
     # install app
     'rest_framework.authtoken',
