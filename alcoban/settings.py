@@ -168,10 +168,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "deaddictiondrop.com" ,
-    "isoplusoil.com" ,
-    "alcofree.in" ,
-    "ayurvedicgurus.com"
+    "http://deaddictiondrop.com" ,
+    "http://isoplusoil.com" ,
+    "http://alcofree.in" ,
+    "http://ayurvedicgurus.com",
+    "https://deaddictiondrop.com" ,
+    "https://isoplusoil.com" ,
+    "https://alcofree.in" ,
+    "https://ayurvedicgurus.com",
 ]
 
 
