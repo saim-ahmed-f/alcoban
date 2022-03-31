@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 import os
-
-import os
 import sys
 import dj_database_url
 
@@ -34,7 +32,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
@@ -52,12 +50,12 @@ INSTALLED_APPS = [
 
     # api App
 
-    'product_api',
-    'review',
-    'shipping_detail',
-    'orders',
+    'product_api.apps.ProductApiConfig',
+    'review.apps.ReviewConfig',
+    'shipping_detail.apps.ShippingDetailConfig',
+    'orders.apps.OrdersConfig',
 
-    'accounts',
+    'accounts.apps.AccountsConfig',
 
     # install app
     'rest_framework.authtoken',
@@ -107,6 +105,8 @@ WSGI_APPLICATION = 'alcoban.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
