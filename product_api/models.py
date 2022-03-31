@@ -60,4 +60,4 @@ class BrandLogo(models.Model):
     Brand_logo = models.ImageField(upload_to = "logo/" , blank=True , null=True)
     def get_Logo(self):
         if self.Brand_logo:
-            return "http://127.0.0.1:8000" + self.Brand_logo.url
+            return "https://alcoban-vbk7q.ondigitalocean.app" + self.Brand_logo.url
