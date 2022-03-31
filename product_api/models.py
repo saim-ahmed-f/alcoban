@@ -45,7 +45,7 @@ class Product_Image(models.Model):
 
     def get_image(self):
         if self.product_images:
-            return "http://127.0.0.1:8000" + self.product_images.url
+            return "https://alcoban-vbk7q.ondigitalocean.app" + self.product_images.url
 
 
 class Product_how_to_use(models.Model):
