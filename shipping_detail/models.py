@@ -8,7 +8,7 @@ class shipping_detail(models.Model):
     
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = models.TextField()
+    phone = models.CharField(max_length=12)
     address = models.TextField()
     city = models.CharField(max_length=50)
     pincode = models.PositiveIntegerField()

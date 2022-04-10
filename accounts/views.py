@@ -81,7 +81,7 @@ def login_username(request , user_name):
     }
     return Response({"login" : "you are login", "Response_status" : "success" , "data" : data} , status=status.HTTP_200_OK)
 
-
+@api_view(["GET"])
 def logout_view(request):
     try:
         logout(request)
